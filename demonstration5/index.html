@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>D3 Charts Dashboard - TV Power Consumption</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="charts/scatter.js" defer></script>
+  <script src="charts/line.js" defer></script>
+  <script src="charts/bar.js" defer></script>
+  <script src="charts/donut.js" defer></script>
+</head>
+<body>
+
+  <header>
+    <h1>D3 Charts Dashboard</h1>
+    <h2>TV Power Consumption</h2>
+  </header>
+
+  <main>
+    <section id="scatter-section">
+      <h3>Scatter Plot: Energy Consumption vs Star Rating</h3>
+      <div id="scatter-chart" class="chart-container"></div>
+    </section>
+
+    <section id="line-section">
+      <h3>Line Chart: Power Prices Over Years</h3>
+      <div id="line-chart" class="chart-container"></div>
+    </section>
+
+    <section id="bar-section">
+      <h3>Bar Chart: Energy Consumption by Screen Type (55 inch TVs)</h3>
+      <div id="bar-chart" class="chart-container"></div>
+    </section>
+
+    <section id="donut-section">
+      <h3>Donut Chart: TV Screen Technologies</h3>
+      <div id="donut-chart" class="chart-container"></div>
+    </section>
+  </main>
+
+</body>
+</html>
