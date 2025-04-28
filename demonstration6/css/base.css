@@ -1,0 +1,72 @@
+/* Overall container */
+body {
+    background-color: #f9f4ec;
+    font-family: "Helvetica Neue", sans-serif;
+    color: #3a2e1f;
+  }
+  
+  /* Title banner */
+  h1 {
+    background-color: #b75c1f;
+    color: #fff;
+    padding: 1rem;
+    margin: 0;
+  }
+  
+  /* Section header */
+  h2 {
+    color: #5b3922;
+    margin-top: 1.2rem;
+  }
+  
+  /* Filter buttons */
+  #filters_screen,
+  #filters_size {
+    margin: 1rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+  }
+  
+  button.filter {
+    background-color: #c76828;
+    border: none;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  button.filter.active {
+    background-color: #ffe0a3;
+    color: #4a2c0a;
+  }
+  
+  button.filter:hover {
+    background-color: #e57b38;
+  }
+  
+  /* Axis label style */
+  .axis-label {
+    fill: #4a2c0a;
+    font-weight: bold;
+    font-size: 12px;
+  }
+  
+  /* Histogram bars */
+  #histogram rect {
+    fill: #555;
+    stroke: white;
+    stroke-width: 1px;
+  }
+  
+  /* Responsive wrapper if needed */
+  .responsive-svg-container {
+    width: 100%;
+    overflow-x: auto;
+    padding-bottom: 1rem;
+  }
+  
