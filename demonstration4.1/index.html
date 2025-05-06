@@ -2,57 +2,67 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>SVG House and Garden</title>
+  <title>SVG House and Garden </title>
   <style>
+    /* Apply stroke and thickness to all basic shapes */
     rect, circle, polygon, path {
       stroke: black;
       stroke-width: 2;
     }
+
+    /* Style for text labels */
     text {
       font-family: Arial, sans-serif;
       font-size: 16px;
-      fill: #333;
+      fill: black;
     }
   </style>
 </head>
 <body>
-  <svg width="500" height="300" xmlns="http://www.w3.org/2000/svg">
+  <svg width="500" height="400" xmlns="http://www.w3.org/2000/svg">
     
-    <!-- Grouped house -->
+    <!-- Sky background covering entire SVG -->
+    <rect x="0" y="0" width="500" height="400" fill="skyblue"/>
+
+    <!-- Grass at the bottom half of the scene -->
+    <rect x="0" y="200" width="500" height="200" fill="green"/>
+
+    <!-- Sun in the top-right corner -->
+    <circle cx="420" cy="70" r="30" fill="yellow"/>
+
+    <!-- Group containing the house components -->
     <g transform="translate(0, 0)">
-      <!-- House base -->
-      <rect x="150" y="120" width="200" height="100" fill="#FFDAB9"/> <!-- peachpuff -->
+      <!-- House base (walls) -->
+      <rect x="150" y="150" width="200" height="120" fill="saddlebrown"/>
       
-      <!-- Roof (triangle) -->
-      <polygon points="150,120 250,60 350,120" fill="#8B0000"/> <!-- dark red -->
+      <!-- Roof as a triangle -->
+      <polygon points="150,150 250,80 350,150" fill="peru"/>
 
-      <!-- Chimney -->
-      <rect x="290" y="70" width="20" height="40" fill="#B22222"/> <!-- firebrick -->
+      <!-- Door in the center-bottom of the house -->
+      <rect x="235" y="210" width="30" height="60" fill="sienna"/>
 
-      <!-- Door -->
-      <rect x="230" y="170" width="40" height="50" fill="#8B4513"/> <!-- saddlebrown -->
-
-      <!-- Grouped Windows -->
-      <g transform="translate(0,0)">
-        <rect x="170" y="140" width="30" height="30" fill="#ADD8E6"/> <!-- lightblue -->
-        <rect x="300" y="140" width="30" height="30" fill="#ADD8E6"/>
-      </g>
+      <!-- Left window -->
+      <rect x="180" y="180" width="30" height="30" fill="lightblue"/>
+      <!-- Right window -->
+      <rect x="290" y="180" width="30" height="30" fill="lightblue"/>
     </g>
 
-    <!-- Tree -->
+    <!-- Group containing the tree -->
     <g transform="translate(0, 0)">
-      <rect x="60" y="160" width="20" height="60" fill="#8B4513"/> <!-- saddlebrown -->
-      <circle cx="70" cy="150" r="30" fill="#228B22"/> <!-- forestgreen -->
+      <!-- Tree trunk -->
+      <rect x="70" y="220" width="20" height="60" fill="saddlebrown"/>
+      
+      <!-- Tree foliage using overlapping circles -->
+      <circle cx="80" cy="210" r="20" fill="forestgreen"/>
+      <circle cx="65" cy="220" r="20" fill="forestgreen"/>
+      <circle cx="95" cy="220" r="20" fill="forestgreen"/>
     </g>
 
-    <!-- Sun -->
-    <circle cx="450" cy="50" r="30" fill="#FFD700"/> <!-- gold -->
+    <!-- Garden path with bezier curves (wavy path) -->
+    <path d="M250 270 Q260 300 240 330 Q250 350 270 330 Q260 300 250 270" fill="gold" stroke="orange" stroke-width="3"/>
 
-    <!-- Path: simple garden path -->
-    <path d="M250 220 Q260 240 240 260 Q250 270 260 260 Q240 240 250 220" fill="#D3D3D3"/> <!-- lightgray -->
-
-    <!-- Label -->
-    <text x="10" y="290">My Colourful SVG House & Garden</text>
+    <!-- Text label for the house -->
+    <text x="360" y="200">House</text>
 
   </svg>
 </body>
